@@ -8,12 +8,11 @@
 #include <string.h>
 #include <ctype.h>
 /**
- * struct stack_s - doubly connected list portrayal of a stack (or line)
- * @n: whole number
- * @prev: focuses to the past component of the stack (or line)
- * @next: points to the next stack or queue element  
- * Description: structure of doubly linked list nodes 
- * for stack, queues, LIFO, and FIFO in the Holberton project 
+ * The stack_s struct is a representation of a stack (or queue)     using a doubly linked list.
+ * @n: an integer
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
+ * Description: This is the node structure for a doubly linked list, used in stack, queues, LIFO, FIFO Holberton project.
  */
 typedef struct stack_s
 {
@@ -22,11 +21,12 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 /**
- * @arg: struct bus_s, variables, args, file, and line content 
- * @file = value pointer to monty record
- * @content: content of line 
- * @lifi: flag move from the stack to the queue 
- * Description: brings values through the program
+ * The struct bus_s represents variables, -args, file, and line content.
+ * @arg is the value.
+ * @file is a pointer to the monty file.
+ * @content is the line content.
+ * @lifi is the flag to change stack <-> queue.
+ * Description: It carries values throughout the program.
  */
 typedef struct bus_s
 {
@@ -37,11 +37,12 @@ typedef struct bus_s
 }  bus_t;
 extern bus_t bus;
 /**
- * struct instruction_s - opcode and its capability
- * @opcode: opcode 
- * @f: capability to deal with the opcode
- * Portrayal: opcode and its capability
- * for stack, lines, LIFO, FIFO Holberton project
+ * struct instruction_s - opcode and its function
+ * @opcode: the opcode
+ * @f: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO Holberton project
  */
 typedef struct instruction_s
 {
@@ -73,4 +74,3 @@ void addqueue(stack_t **head, int n);
 void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
 #endif
-

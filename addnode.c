@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * addnode - add hub to the head stack
- * @head: at the top of the stack
- * @n:  new_value's result 
+ * addnode - insert a node at the top of the stack
+ * @head: the head of the stack
+ * @n: the new value
  * Return: no return
 */
 void addnode(stack_t **head, int n)
@@ -22,4 +22,3 @@ void addnode(stack_t **head, int n)
 	new_node->prev = NULL;
 	*head = new_node;
 }
-
